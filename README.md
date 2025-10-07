@@ -1,73 +1,88 @@
-# Welcome to your Lovable project
+# 💸 SplitSmart – Smart Expense Splitter & Tracker
 
-## Project info
+SplitSmart is a mobile application that simplifies how people manage shared expenses among friends, family, or colleagues.  
+It allows users to **create groups**, **add members**, **record shared expenses**, and **automatically calculate balances** — ensuring transparency, fairness, and simplicity in group spending.
 
-**URL**: https://lovable.dev/projects/3c0354ad-f370-4b5a-93c2-c1a6239962d1
+---
 
-## How can I edit this code?
+## 🚀 Features
 
-There are several ways of editing your application.
+- 👥 **Group Management:** Create groups for trips, roommates, or events.  
+- 💰 **Expense Tracking:** Add shared expenses and split them equally or by custom shares.  
+- 🔢 **Balance Calculation:** Automatically computes who owes whom.  
+- 🔔 **Reminders & Notifications:** Get notified for pending dues and new expense additions.  
+- 📊 **Expense Overview:** View total spent, share per person, and detailed analytics.  
+- 🌙 **Dark Mode Support:** Sleek UI for both light and dark modes.  
 
-**Use Lovable**
+> 💡 *Future Update:* UPI / Payment gateway integration for direct settlements within the app.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/3c0354ad-f370-4b5a-93c2-c1a6239962d1) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🧩 System Architecture
 
-**Use your preferred IDE**
+**Frontend:** Flutter / React Native  
+**Backend:** Firebase (Authentication, Firestore Database, Cloud Functions)  
+**Notifications:** Firebase Cloud Messaging (FCM)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## ⚙️ Tech Stack
 
-Follow these steps:
+| Layer | Technology |
+|-------|-------------|
+| Frontend | Flutter / React Native |
+| Backend | Firebase |
+| Database | Firestore |
+| Notifications | FCM |
+| Authentication | Firebase Auth |
+| Analytics | Firebase Analytics |
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🧭 Development Phases & Objectives
 
-# Step 3: Install the necessary dependencies.
-npm i
+**Phase 1:** Research & Requirement Gathering – Identify user pain points and define key features.  
+**Phase 2:** UI/UX Design – Create wireframes and user flow for smooth app navigation.  
+**Phase 3:** Backend Setup – Configure Firebase for authentication and real-time data.  
+**Phase 4:** Frontend Development – Implement screens for groups, expenses, and balances.  
+**Phase 5:** Expense Logic – Develop smart algorithms for fair splitting and balance updates.  
+**Phase 6:** Testing & QA – Perform functional and usability testing.  
+**Phase 7:** Deployment – Release initial version for beta testing.  
+**Phase 8:** Maintenance & Enhancement – Integrate UPI and advanced analytics in later versions.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+---
 
-**Edit a file directly in GitHub**
+## 🔐 Security
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- Firebase Authentication for secure login  
+- Firestore database with role-based access  
+- Data protection via HTTPS and Firebase rules  
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🧠 Future Enhancements
 
-## What technologies are used for this project?
+- 💳 **UPI / Payment Gateway Integration** for direct settlement  
+- 🧾 **Bill Scanning (OCR)** for automatic expense entry  
+- 🤖 **AI Expense Categorization** for insights and trends  
+- 🌐 **Multi-currency & Offline Support**  
+- 📈 **Web Dashboard** for advanced analytics  
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🏁 Conclusion
 
-## How can I deploy this project?
+**SplitSmart** is designed to bring simplicity and fairness to shared expense management.  
+With real-time syncing, smart balance calculation, and a clean interface, it removes the hassle of manual tracking — making group expenses seamless and stress-free.
 
-Simply open [Lovable](https://lovable.dev/projects/3c0354ad-f370-4b5a-93c2-c1a6239962d1) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my Lovable project?
+### 👨‍💻 Developer
+**Mriganka Yuyuy**  
+📍 GitHub: [mriganka-77](https://github.com/mriganka-77)  
+💬 *“Simplifying shared finances, one split at a time.”*
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+### 🏷 License
+This project is open-source and available under the **MIT License**.
