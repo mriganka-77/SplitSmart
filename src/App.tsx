@@ -6,10 +6,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./contexts/AuthContext";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { OfflineProvider } from "./contexts/OfflineContext";
-import { RequireAuth } from "@/components/auth/RequireAuth";
+import { RequireAuth } from "./components/auth/RequireAuth";
 
-import Splash from "./pages/Splash";
 import Auth from "./pages/Auth";
+import AuthCallback from "./pages/AuthCallback";
 import Dashboard from "./pages/Dashboard";
 import Groups from "./pages/Groups";
 import GroupDetails from "./pages/GroupDetails";
@@ -32,16 +32,80 @@ const App = () => (
             <Sonner />
             <BrowserRouter>
               <Routes>
-                <Route path="/" element={<Splash />} />
                 <Route path="/auth" element={<Auth />} />
-                <Route path="/dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} />
-                <Route path="/groups" element={<RequireAuth><Groups /></RequireAuth>} />
-                <Route path="/group/:id" element={<RequireAuth><GroupDetails /></RequireAuth>} />
-                <Route path="/add-expense" element={<RequireAuth><AddExpense /></RequireAuth>} />
-                <Route path="/balances" element={<RequireAuth><Balances /></RequireAuth>} />
-                <Route path="/contacts" element={<RequireAuth><Contacts /></RequireAuth>} />
-                <Route path="/payments" element={<RequireAuth><PaymentHistory /></RequireAuth>} />
-                <Route path="/profile" element={<RequireAuth><Profile /></RequireAuth>} />
+                <Route path="/auth/callback" element={<AuthCallback />} />
+                <Route
+                  path="/"
+                  element={
+                    <RequireAuth>
+                      <Dashboard />
+                    </RequireAuth>
+                  }
+                />
+                <Route
+                  path="/dashboard"
+                  element={
+                    <RequireAuth>
+                      <Dashboard />
+                    </RequireAuth>
+                  }
+                />
+                <Route
+                  path="/groups"
+                  element={
+                    <RequireAuth>
+                      <Groups />
+                    </RequireAuth>
+                  }
+                />
+                <Route
+                  path="/group/:id"
+                  element={
+                    <RequireAuth>
+                      <GroupDetails />
+                    </RequireAuth>
+                  }
+                />
+                <Route
+                  path="/add-expense"
+                  element={
+                    <RequireAuth>
+                      <AddExpense />
+                    </RequireAuth>
+                  }
+                />
+                <Route
+                  path="/balances"
+                  element={
+                    <RequireAuth>
+                      <Balances />
+                    </RequireAuth>
+                  }
+                />
+                <Route
+                  path="/contacts"
+                  element={
+                    <RequireAuth>
+                      <Contacts />
+                    </RequireAuth>
+                  }
+                />
+                <Route
+                  path="/payments"
+                  element={
+                    <RequireAuth>
+                      <PaymentHistory />
+                    </RequireAuth>
+                  }
+                />
+                <Route
+                  path="/profile"
+                  element={
+                    <RequireAuth>
+                      <Profile />
+                    </RequireAuth>
+                  }
+                />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </BrowserRouter>

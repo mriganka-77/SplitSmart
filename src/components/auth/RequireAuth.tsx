@@ -1,7 +1,7 @@
 import { PropsWithChildren } from "react";
 import { Navigate, useLocation } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
-import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
+import { Loader2 } from "lucide-react";
 
 export function RequireAuth({ children }: PropsWithChildren) {
   const { user, loading } = useAuth();
@@ -9,15 +9,19 @@ export function RequireAuth({ children }: PropsWithChildren) {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-background">
-        <LoadingSpinner size="lg" />
+      <div className="flex items-center justify-center min-h-screen">
+        <Loader2 className="w-8 h-8 animate-spin" />
       </div>
     );
   }
 
   if (!user) {
-    const redirect = encodeURIComponent(location.pathname + location.search);
-    return <Navigate to={`/auth?reason=auth&redirect=${redirect}`} replace />;
+    return (
+      <Navigate
+        to={`/auth?redirect=${encodeURIComponent(location.pathname)}`}
+        replace
+      />
+    );
   }
 
   return <>{children}</>;
